@@ -1,0 +1,29 @@
+.card-background-image{
+   background-size: cover;
+   background-repeat: none !important;
+   overflow: hidden !important;
+   position: relative;
+   max-width: 100%;
+   width: 100%;
+   @media only screen and (min-width: $mobile){
+      height: 100%;
+      min-height: 650px;
+   }
+   @media only screen and (min-width: $desktop-xl){ 
+
+     background-position-y: bottom;
+   }
+   &--crop-fix{
+      // background-size: 100%;
+      // background-size: 100%;
+      background-position: center;
+      background-repeat: none !important;
+      @media only screen and (min-width: $desktop) and (max-width: $desktop-xl){
+      
+     }
+      @media only screen and (max-width: $tablet){ 
+         background-size: cover !important;
+         
+      }
+   }
+}

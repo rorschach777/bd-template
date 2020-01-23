@@ -1,0 +1,13 @@
+.card-border{   
+    &:nth-child(2){
+        position: relative;
+        left: -$spacing-med;
+        border-left: solid 2px $color-1;
+        padding-left: $spacing-med;
+        @media only screen and (max-width: $tablet){ 
+            left: unset;
+            border-left: none;
+            padding-left: unset;
+        }
+    }
+}

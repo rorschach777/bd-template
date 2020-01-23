@@ -1,0 +1,63 @@
+// Brand Colors
+$color-1: #082d59;
+$color-2: #aec027;
+$color-3: #dc9a45;
+$color-4: #00686b;
+$color-5: #e3e9ba;
+// iOS Color
+$color-ios-blue:rgb(0,122,255) ;
+$color-ios-green: rgb(48,209,88);
+$color-ios-purple: rgb(94,92,230);
+$color-ios-orange: rgb(255,159,10);
+$color-ios-pink: rgb(255,55,95);
+$color-ios-purple: rgb(191,90,242);
+$color-ios-red: rgb(255,69,58);
+$color-ios-teal: rgb(100,210,255);
+$color-ios-yellow: rgb(255,214,10);
+// Neutrals
+$color-white: #fafafa;
+$color-gray-1: #e7e7e7;
+$color-gray-2: #dddddd;
+$color-gray-3: #cccccc;
+$color-gray-4: #bbbbbb;
+$color-gray-5: #aaaaaa;
+$color-gray-6: #777777;
+$color-gray-7: #666666;
+$color-black: #333333;
+// Brand Fonts
+$font-main: Muli;
+$font-secondary: Montserrat;
+$font-fallback: sans-serif;
+$font-weight-bold: 700;
+$font-weight-medium: 500;
+$font-weight-light: 300;
+// Text Sizes: 
+$h1: 42;
+$h2: 35;
+$h3: 30;
+$h4: 28;
+$h5: 26;
+$h6: 18;
+$p: 17; 
+// Breakpoints
+$mobile:  480px;
+$tablet: 768px;
+$desktop: 992px;
+$desktop-xl: 1220px;
+$desktop-2xl: 1500px;
+// Spacing
+$spacing-sm: 15px;
+$spacing-med: 25px;
+$spacing-lg: 50px;
+$spacing-xl: 150px;
+// Containers
+$height: 750;
+$container-main: 1080px;
+$container-16x9-min-height: 600;
+$container-16x9-max-height: $height;
+$container-16x9-max-height-half: $container-16x9-max-height / 2;
+
+
+// Footer
+$pre-footer-height: 80px;
+$pre-footer-offset: $pre-footer-height - $spacing-sm;

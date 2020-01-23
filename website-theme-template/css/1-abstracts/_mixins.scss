@@ -1,0 +1,74 @@
+@mixin padding-box($padding: 15px) {
+    padding: $padding;
+    box-sizing: border-box;
+}
+
+@mixin center-block($margin: 0px) {
+    display: block !important;
+    margin: $margin auto !important;
+}
+
+@mixin photo-cover {
+    background-size: cover;
+    background-repeat: none;
+}
+
+@mixin mobile-padding {
+    @media only screen and (max-width: $tablet) {
+        @include padding-box;
+    }
+}
+
+@mixin text-shadow($opacity: 0.95) {
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, $opacity);
+}
+
+@mixin mqMax($device: $tablet) {
+    @media only screen and (max-width: $device) {
+        flex-basis: 100%;
+    }
+}
+
+@mixin mqMin($device: $mobile, $prop: $val) {
+    @media only screen and (min-width: $device) {
+        $prop: $val;
+    }
+}
+
+@mixin text-width($margin: 0) {
+    @include center-block($margin);
+    @media only screen and (min-width: $desktop) {
+        max-width: 750px !important;
+    }
+    max-width: 100% !important;
+}
+
+@mixin border($width: 1px) {
+    border-bottom: solid $width $color-gray-5;
+}
+
+
+@mixin adjustFontsSmallBrowsers($fontElement, $extraSpace: 0){
+    // $i is the approximate value for a good mobile decrease in size... 
+    // $fontElement = 16, then i = 2 | $fontElement = 32, then i = 4 
+        // adjustSize : 16 - 2;  32 - 4; 
+  
+    @media only screen and (min-width: $tablet + 1) and (max-width: $desktop-xl){ 
+        // adjust size just decreases the font size by an integer
+        $i : ceil(($fontElement / 8) + $extraSpace);
+        font-size: adjustSize($fontElement, $i) + px;
+        line-height: lineHeight(adjustSize($fontElement, $i) ) + px;
+    }
+    @media only screen and (max-width: $tablet){ 
+        // adjust size just decreases the font size by an integer
+        $i : ceil(($fontElement / 8) + $extraSpace);
+        font-size: adjustSize($fontElement, $i) + px;
+        line-height: lineHeight(adjustSize($fontElement, $i) ) + px;
+    }
+    @media only screen and (max-width: $mobile){ 
+        // adjust size just decreases the font size by an integer
+        $i : ceil(($fontElement / 5) + $extraSpace);
+        font-size: adjustSize($fontElement, $i) + px;
+        line-height: lineHeight(adjustSize($fontElement, $i)) + px;
+    }
+}

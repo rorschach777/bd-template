@@ -1,0 +1,10 @@
+.heading-graphic{
+    @include padding-box(10px);
+    margin: 15px 0px;
+    background-color: $color-2;
+    width: 35%;
+    display: block;
+    @media only screen and (max-width: $tablet){
+        width: 50%;
+    } 
+}

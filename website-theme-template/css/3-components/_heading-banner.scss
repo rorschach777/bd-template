@@ -1,0 +1,27 @@
+.heading-banner{
+    padding: 25px 0 !important;
+    h6{
+        font-family:$font-main,  sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        line-height: 1.7em;
+        margin: 0px !important;
+        padding: 0px !important;
+
+    }
+     h5 {
+        font-size: 24px !important;
+        line-height: 30px !important;
+
+        margin: 0px !important; 
+        padding: 0px !important;
+        a{
+            color: $color-2 !important;
+        }
+    }
+    .et_pb_fullwidth_header_scroll{
+        display: none;
+    }
+}

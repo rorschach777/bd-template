@@ -1,0 +1,12 @@
+// Hero
+.hero{
+    & > div > div > div > div> h1 {
+        @include text-shadow;
+        color: $color-white;
+    
+    }
+    @media only screen and (max-width: $mobile ){ 
+        @include padding-box(75px);
+    }
+
+}

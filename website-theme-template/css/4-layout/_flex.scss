@@ -1,0 +1,68 @@
+.flex-container{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100%;
+    
+    @media only screen and (max-width: $tablet){
+       height: auto;
+       overflow: visible;
+    }
+}
+.col{
+    margin: 0px;
+    box-sizing: border-box;
+    height: inherit;
+    &--full{
+        flex-basis: 100%;
+    }
+    &--half{
+        flex-basis: 50%;
+        @media only screen and (max-width: $tablet){
+            flex-basis: 100% !important;
+        }
+    }
+    &--two-third{
+        flex-basis: 66%;
+
+    }
+    &--third{
+        flex-basis: 33%;
+
+    }
+    &--quarter{
+        flex-basis: 25%;
+
+    }
+
+}
+
+
+
+.col{
+    float: left;
+    height: 100%;
+    &--full{
+        width: 100%;
+    }
+    &--half{
+        width: 50%;
+        @media only screen and (max-width: $tablet){
+            width: 100% !important;
+        }
+    }
+    &--two-third{
+        width: 66%;
+
+    }
+    &--third{
+        width: 33%;
+
+    }
+    &--quarter{
+        width: 25%;
+
+    }
+
+}

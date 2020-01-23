@@ -1,0 +1,29 @@
+.frm_fields_container{
+    .frm_form_field{
+        & > input, select, textarea{
+            border-radius: 0px !important;
+            border-radius: 0px !important; 
+            -webkit-appearance: none;
+            -webkit-border-radius: 0px;
+            // border:none !important;
+            // box-shadow: 2px 2px 10px 10px #ccc;
+            // -webkit-box-shadow: 2px 2px 10px 2px #ccc;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1) !important;
+            -webkit-box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1) !important;
+        }
+    }
+    .frm_submit{
+         .frm_button_submit{
+            @include center-block(15px);
+            background-color: $color-2 !important;
+            color: $color-white !important;
+            border-radius: 0px !important;
+            width: 170px !important;
+            font-size: 22px !important;
+            text-transform: uppercase !important;
+            font-family: $font-main !important;
+            font-weight: bold !important
+        }
+    }
+  
+}

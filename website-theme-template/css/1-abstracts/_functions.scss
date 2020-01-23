@@ -1,0 +1,9 @@
+@function lineHeight($fontSize, $extraSpace: 0){
+    $calculation: ($fontSize / 2.8) + $fontSize + $extraSpace;
+    $result: ceil($calculation);
+    @return $result
+};
+@function adjustSize($fontSize, $i){
+    $result: ceil($fontSize - $i);
+    @return $result;
+}

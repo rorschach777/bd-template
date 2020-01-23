@@ -1,0 +1,238 @@
+
+
+// OUTER MOST WRAPPER
+section.section-16x9{
+    // display: block;
+    // background-color: $color-gray-1 !important;
+    // MAX HEIGHT: 
+    height: auto;
+    @media only screen and (min-width: $desktop) and (max-width: $desktop-xl){
+        min-height: $container-16x9-min-height + px !important;
+        height: $container-16x9-min-height + px !important; 
+    }
+    @media only screen and (min-width: $desktop-xl){ 
+        height: $container-16x9-max-height + px;
+    }
+    @media only screen and (max-width: $desktop) {
+        padding: unset;
+        height: auto;
+        width: 100%;
+    }
+  
+}
+// FIRST ASPECT RATIO DIV... 
+// MAINTAINS 16x9 -- outer wrapper passes fixed height at breakpoint. 
+section.section-16x9 > div.container-16x9 {
+    // background-color: $color-gray-3;
+    padding-top: 50%;
+    background-color: inherit;
+    overflow: inherit;
+    @media only screen and (min-width: $desktop + 1) {
+        padding-top: unset !important;
+      height: inherit;
+    }
+    @media only screen and (max-width: $desktop) {
+        padding-top: unset !important;
+      height: inherit;
+    }
+    // @media only screen and ($desktop){ 
+    //     padding-top: unset !important;
+    //     // background-color: $color-ios-blue;
+    //     height:  inherit;
+    //     max-height: $container-16x9-max-height + px !important;
+    // }
+    & > div.container-full-width-half-col > div.col-float--half{
+        padding-top: unset;
+        height: inherit;
+        max-height: inherit;
+    }
+}
+
+
+// FIRST NESTED 16X9 CONTAINER
+section.section-16x9 > div.container-16x9 > div.container-16x9__inner > div.container-full-width-half-col > div.col-float--half > div.container-16x9 {
+
+        // THIS IS REPEAT CODE OF STANDARD 16X9 CONTENT
+        @media only screen and (max-width: $desktop) {
+            position: relative;
+            height: auto;
+            width: 100%;
+            overflow: visible;
+        }
+        @media only screen and (min-width: $desktop) {
+            min-height: $container-16x9-min-height  / 2 + px !important;
+            height: $container-16x9-min-height  / 2 + px !important; 
+        }
+        @media only screen and (min-width: $desktop-xl){ 
+            // background-color: $color-ios-purple;
+            padding-top: unset !important;
+            overflow: hidden;
+            min-height: $container-16x9-max-height-half + px !important;
+            height: $container-16x9-max-height-half + px !important;
+        }
+ 
+}
+
+
+
+.container-16x9 {
+    height: 0;
+    overflow: hidden;
+    // padding-top: 56.25%;
+    padding-top: 50%;
+    position: relative;
+    font-family: $font-main, $font-fallback;
+    &__inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        @media only screen and (max-width: $desktop) {
+            position: relative;
+            height: auto;
+            width: 100%;
+            overflow: visible;
+        }
+
+        @media only screen and (max-width: 1385px) {
+            & > h4{
+                display:none;
+            }
+            & > h6 {
+                font-size: 15px;
+                line-height: 20px;
+            }
+            & > h6:nth-child(2) {
+                display: none;
+            }
+        }
+    }
+    @media only screen and (max-width: $desktop) {
+        padding: unset;
+        height: auto;
+        width: 100%;
+    }
+    // /*******************/
+    // // WHITE SPACE FIX  | CONTAINER
+    // /*******************/ 
+    // @media only screen and (min-width: $desktop-xl){ 
+    //     // padding-top: inherit;
+    //     // padding-top: 700px;
+    //     // display: block;
+    //     // height: $height;
+    //     // max-height: $height;
+    //     // padding-top: auto;
+    // }
+}
+
+.container-centered-text {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    flex-basis: 100%;
+    min-height: inherit;
+    font-family: $font-main, $font-fallback;
+    overflow: visible;
+
+    &__inner {
+        @include padding-box(45px);
+        @include mobile-padding;
+        position: absolute;
+        min-height: inherit;
+        display: table;
+        width: 100%;
+        max-width: 100%;
+        height: inherit;
+        text-align: center;
+        .text-block-main{
+            text-align: left !important;
+        }
+        line-height: normal;
+        @media only screen and (max-width: $desktop-xl){
+            @include padding-box(15px);
+         }
+        @media only screen and (max-width: $desktop) {
+            @include padding-box(50px 15px);
+            z-index: 999;
+            position: relative;
+            display: block;
+            min-height: inherit;
+            overflow: visible !important;
+        }
+
+        &__content {
+            width: 100%;
+            min-height: inherit;
+            display: table-cell;
+            vertical-align: middle;
+            font-family: $font-main, $font-fallback;
+            color: #333;
+
+            @media only screen and (max-width: $desktop) {
+                display: block;
+                min-height: inherit;
+            }
+
+            & > h5 {
+                // @include center-block;
+                @include text-width;
+                @media only screen and (max-width: $desktop-xl){ 
+                    font-size: 22px !important;
+                    line-height: 30px !important;
+                }
+            }
+        }
+    }
+}
+
+
+
+.container-flex-height {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    min-height: inherit;
+    @media only screen and (max-width: $mobile){
+        min-height: unset;
+     }
+}
+
+
+
+.container-full-width-half-col {
+    position: relative;
+    height: inherit;
+    min-height: inherit;
+    overflow: hidden;
+    width: 100%;
+
+    // height: 500px;
+    // min-height: 500px;
+    @media only screen and (max-width: $mobile) {
+        height: inherit;
+
+        // min-height: 300px;
+    }
+
+    .photo-section {
+        @include photo-cover;
+
+        height: auto;
+        min-height: inherit;
+        overflow: hidden;
+        background-image: url("http://localhost:8888/bd-long-brothers-landscaping/wp-content/uploads/2019/12/lb-half-width-1.jpg");
+    }
+
+    .quote-section {
+        // background-color: $color-2;
+        height: auto;
+        overflow: hidden;
+        height: inherit;
+        min-height: inherit;
+    }
+}

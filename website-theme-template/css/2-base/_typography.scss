@@ -1,0 +1,94 @@
+body {
+
+
+    h1 {
+        font-size: 42px;
+        font-weight: $font-weight-bold;
+        font-family: $font-secondary, $font-fallback;
+        font-weight: 700;
+    }
+
+    h2 {
+        font-size: 35px;
+        line-height: 41px !important;
+        font-weight: $font-weight-bold;
+        margin-bottom: $spacing-sm;
+        font-family: $font-main, $font-fallback;
+    }
+
+    h3 {
+        font-size: 30px;
+        line-height: 36px;
+        font-weight: 700 !important;
+        margin-bottom: $spacing-sm;
+        font-weight: $font-weight-bold;
+        font-family: $font-main, $font-fallback;
+        @media only screen and (max-width: $desktop-xl) {
+            font-size: 20px !important;
+            line-height: 25px !important;
+            margin-bottom: 0 !important;
+        }
+    }
+
+    h4 {
+        font-size: 28px;
+        line-height: 37px;
+        margin-bottom: 0px;
+        font-weight: $font-weight-bold;
+        font-family: $font-main, $font-fallback;
+    }
+
+    h5 {
+        font-size: 26px;
+        line-height: 36px !important;
+        margin-bottom: $spacing-sm;
+        font-weight: $font-weight-bold;
+        font-family: $font-main, $font-fallback;
+    }
+
+    h6 {
+        font-size: 18px;
+        line-height: 26px !important;
+        margin-top: 0px;
+        margin-bottom: $spacing-sm;
+        font-family: $font-main, $font-fallback;
+    }
+
+    p {
+        font-size: 14px;
+        line-height: 20px !important;
+        font-family: $font-main, $font-fallback;
+    }
+}
+
+// Header following the hero section.
+.header-photo-after{
+    background-color: $color-white !important;
+}
+
+.heading-hero-after > .et_pb_fullwidth_header_container > .header-content-container > .header-content > .et_pb_header_content_wrapper > h5 {
+    margin: 0px !important;
+    margin-top: -10px !important;
+}
+
+// Dropdown Toggle Content text padding
+.et_pb_toggle_content {
+    box-sizing: border-box;
+    padding: 35px !important;
+    @media only screen and (max-width: $mobile) {
+        padding: 15px !important;
+    }
+}
+.et_pb_toggle_title{
+    @media only screen and (max-width: $mobile){
+        font-size: 14px !important;
+     }
+}
+
+.et_pb_module.et_pb_toggle {
+    border-color: rgba(255,255,255,1) !important;
+}
+.et_pb_toggle{
+    display: none !important;
+}
+

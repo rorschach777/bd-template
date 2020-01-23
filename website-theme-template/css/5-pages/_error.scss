@@ -1,0 +1,12 @@
+.error-page{
+    @include padding-box(10%);
+    min-height: 550px !important;
+    height: 75vh !important;
+    text-align: center;
+    h1{
+        color: $color-2;
+    }
+    .container-main{
+        min-height: inherit;
+    }
+}

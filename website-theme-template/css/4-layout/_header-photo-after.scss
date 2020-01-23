@@ -1,0 +1,42 @@
+
+$offset: 30px;
+.header-photo-after{
+    @include center-block;
+    position: relative;
+    top: -$offset;
+    position: relative;
+    background-color: $color-2 !important;
+    padding: 0px !important; 
+    @media only screen and (max-width: $mobile){ 
+        top:0px;
+        height: 40px;
+    }
+    .et_pb_toggle_title {
+        top: 5px;
+        max-height: 65px;
+        text-align: center !important;
+        position: relative;
+   
+        // Expand Icon
+        &:before{
+            right: 5px !important;
+
+        }
+    }
+    .et_pb_toggle_content {
+        @include padding-box(8px);
+        background-color: #ffffff;
+        width: 100%;
+        
+    } 
+}
+.et_pb_row_2.et_pb_row{
+    @media only screen and (max-width: $mobile ){ 
+        margin-top: $offset !important;
+    }
+}
+.et_pb_row_2 {
+    @media only screen and (max-width: $mobile ){ 
+        top: 0px !important;
+    }
+}

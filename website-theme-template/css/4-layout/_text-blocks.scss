@@ -1,0 +1,49 @@
+.text-block-main{
+    @include center-block;
+    @include text-width;
+
+    @media only screen and (max-width: $desktop-xl){ 
+        h4{
+            margin: 0px;
+            font-size: 24px;
+            line-height: 28px;
+        }
+        h6{
+            font-size: 15px;
+            line-height: 22px !important;
+        }
+   
+        // p:nth-child(2){
+        //     font-size: 15px !important;
+        //     line-height: 22px !important;
+        // }
+    }
+}
+.text-large-list{
+    @include text-width;
+    h5{
+        margin-bottom: 20px;
+
+    }
+    
+    // //TODO: Fix this ... should text width be ref...
+    // // this mixin was affecting width weirdly
+
+    ul{
+        
+        text-align: center !important;
+        @include center-block($spacing-sm);
+        width: 500px;
+        max-width: 100%;
+        a{
+            color: $color-1;
+        }
+        li{
+            text-align: left!important;
+            font-size: 18px;
+            line-height: 28px;
+            max-width: 450px;
+            // @include center-block;
+        }
+    }
+}

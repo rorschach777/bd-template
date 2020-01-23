@@ -1,0 +1,79 @@
+.u-color-1-bkg{
+    background-color: $color-1 !important;
+    color: $color-white;
+}
+.u-color-1{
+    color: $color-1 !important;
+}
+.u-color-2-bkg{
+    background-color: $color-2 !important;
+    color: $color-white;
+}
+.u-color-2{
+    color: $color-2;
+}
+.u-color-3-bkg{
+    background-color: $color-3 !important;
+    color: $color-white;
+}
+.u-color-3{
+    color: $color-3;
+}
+.u-color-4-bkg{
+    background-color: $color-4 !important;
+    color: $color-white;
+}
+.u-color-4{
+    color: $color-4;
+}
+.u-color-5-bkg{
+    background-color: $color-5 !important;
+    color: $color-white;
+}
+.u-color-5{
+    color: $color-5 !important;
+}
+.u-color-white{
+    color: $color-white !important; 
+}
+.u-color-gray-1-bkg{
+    background-color: $color-gray-1;
+}
+.u-center{
+    text-align: center;
+}
+.u-center-mobile{
+    @media only screen and (max-width: $desktop){
+        text-align: center !important;
+    }
+}
+.u-left{
+    text-align: left !important;
+}
+.u-padding-large{
+    // @include padding-box(45px);
+    @media only screen and (max-width: 1400px) {
+        @include padding-box;
+    }
+}
+.u-hide {
+    display: none !important;
+}
+.u-hide-tablet{
+    @media only screen and (max-width: $tablet){
+        display: none;
+     }
+}
+
+.u-background-image{
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    max-height: 100%;
+    @media only screen and (max-width: $tablet) {
+        min-height: 350px;
+    }
+}
+.u-border-radius{
+    border-radius: 5px;
+}

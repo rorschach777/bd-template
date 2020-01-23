@@ -1,0 +1,54 @@
+//header
+
+
+// Fixed header Mobile
+@media (max-width: 980px) {
+    .et_fixed_nav #main-header, .et_non_fixed_nav.et_transparent_nav #main-header {
+        -webkit-transition: none;
+        -moz-transition: none;
+        transition: none;
+		position: fixed;
+		margin-bottom: 0px;
+		height: 90px !important;
+    }
+}
+
+
+ #logo {
+
+    max-height: 100% !important;
+    height: 100% !important;
+    // @media only screen and (min-width: $desktop-xl) and (max-width: $desktop-2xl) {
+    //     display: none !important;
+    //     // max-width: 180px !important;
+    //     // max-height: 40% !important;
+    //     // height: 40% !important;
+    // }
+    @media only screen and (min-width: $tablet) and (max-width: $desktop-xl) {
+        // display: none !important;
+        max-width: 180px !important;
+        max-height: 80% !important;
+        height: 80% !important;
+    }
+}
+#top-menu a:active {
+    color: rgba(206, 151, 59, 1) !important;
+}
+
+#top-menu a:hover {
+    color: rgba(0, 0, 0, 1) !important;
+}
+
+.current_page_item > a {
+    color: $color-3 !important;
+}
+
+header {
+    ul.nav {
+        & > li {
+            @media only screen and (min-width: $desktop) and (max-width: $desktop-xl){ 
+                padding-right: 10px !important;
+            }
+        }
+    }
+}

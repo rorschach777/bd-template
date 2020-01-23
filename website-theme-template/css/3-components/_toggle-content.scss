@@ -1,0 +1,32 @@
+.et_pb_toggle{
+    height: auto !important;
+    border: none !important;
+
+    &:last-child{
+        margin-bottom: 25px !important;
+    }
+}
+.et_pb_toggle_content{
+    display: block !important;
+    ul{
+        margin-top: 15px !important;
+        // margin-left: -15px !important;
+        @media only screen and (max-width: $mobile){
+            // margin-left: -5px !important;
+        }
+        li{
+            line-height: 24px !important;
+        }
+    }
+}
+h6.et_pb_toggle_title:before{
+    display: none;
+    background-color: red;
+    border: none !important;
+}
+h6.et_pb_toggle_title {
+    font-family: $font-main;
+    font-weight: $font-weight-bold;
+    text-transform: none !important;
+    color: #082d59!important;
+}

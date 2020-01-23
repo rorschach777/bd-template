@@ -1,0 +1,134 @@
+footer {
+    position: relative;
+    & > div.container > div#footer-widgets{
+        display: none;
+    }
+    .pre-footer{
+        position: relative;
+        bottom: -5%;
+        width: 100%;
+        padding-top: 3%;
+        // background-color: red;
+        position: relative;
+        overflow-y: visible;
+        &__inner{
+            position: absolute;
+            top: -100%;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            overflow: visible;
+            height: inherit;
+            background: url('http://localhost:8888/bd-long-brothers-landscaping/wp-content/uploads/2020/01/footer-before-graphic.svg') no-repeat;
+            background-position: center;
+            width: 100%;
+            background-size: cover;
+            background-repeat: none;
+        }
+    }
+}
+
+.footer-logo {
+    float: none !important;
+    @include center-block;
+
+    position: relative;
+    top: -35px;
+
+    width: 300px;
+    max-width: 300px !important;
+ 
+    @media only screen and (max-width: $tablet){
+        max-width: 250px !important;
+        top: -15px;
+     }
+}
+
+.footer-custom-container{
+    position: relative;
+    width: 100%;
+    display: table;
+    height: 100%;
+    margin: 10px 0;
+    position: realtive; 
+    top: -5px;
+    .et-social-icons-wrapper{
+        position: absolute;
+        display: table;
+        height: 100%;
+        top: 0px;
+        max-height: 100%;
+        right: $spacing-sm;
+        @media only screen and (max-width: $tablet){
+            position: relative;
+            width: 100%;
+        }
+    }
+    .et-social-icons{
+        display: table-cell;
+        vertical-align: center;
+        @media only screen and (max-width: $tablet){
+            position: relative;
+            @include center-block($spacing-sm) 
+         }
+        li.et-social-rss > a::before{
+            content: '\e09d' !important;
+        }
+    }
+    
+}
+
+// Custom Footer List
+.footer-custom-list{
+    max-width: 1080px;
+    width: auto;
+    text-align: center;
+    max-width: 100%;
+    font-size: 16px;
+    margin: 0 auto;
+    display: block;
+    @media only screen and (max-width: $tablet){ 
+        text-align: center;
+    }
+     p{
+        display: inline-block;
+        font-size: inherit;
+        text-transform: uppercase;
+        color: $color-white;
+        @media only screen and (max-width: $mobile){
+            font-size: 14px;
+            color: $color-gray-2;
+        }
+    }
+    ul {
+        display: inline-block;
+        margin-top: -5px;
+        @media only screen and (max-width: $tablet){
+            @include center-block(20px)
+        }
+        li{
+            font-size: 12px;
+            display: inline-block;
+            font-size: inherit;
+            font-family: $font-main;
+            @media only screen and (max-width: $tablet){ 
+                display: block;
+                width: 100%;
+                text-align: center;
+            }
+            a {
+                color: $color-white;
+            }
+
+            &:before {
+                content: ' | ';
+                color: $color-2;
+                margin: 0 $spacing-sm;
+                display: inline-block;
+                @media only screen and (max-width: $tablet){
+                    content: '';
+                }
+            }
+        }
+    }
+}

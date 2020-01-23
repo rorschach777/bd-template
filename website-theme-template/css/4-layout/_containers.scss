@@ -1,0 +1,355 @@
+$breakpoint: $desktop;
+$height: 700;
+.container-square-content {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: visible;
+    padding: 0px;
+}
+.container-16x5 {
+    width: 100%;
+    padding-top: 30%;
+    overflow: visible;
+    position: relative;
+    min-height: inherit;
+    font-family: $font-main, $font-fallback;
+
+    &__inner {
+        // @include padding-box;
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+
+        @media only screen and (max-width: $breakpoint) {
+            position: relative;
+            height: auto;
+            width: 100%;
+            overflow: visible;
+        }
+        @media only screen and (max-width: 1385px) {
+         & > h6 {
+                font-size: 15px;
+                line-height: 20px;
+            }
+
+        }
+    }
+    @media only screen and (max-width: $breakpoint) {
+        padding-top: unset !important;
+        height: auto;
+        width: 100%;
+    }
+}
+.aspect-ratio-box {
+    height: 0;
+    overflow: hidden;
+    padding-top: 56.25%;
+    background: red;
+    position: relative;
+  }
+  .aspect-ratio-box-inside {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .flexbox-centering {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .viewport-sizing {
+    font-size: 5vw;
+  }
+/*******************/
+// WHITE SPACE FIX
+/*******************/
+// section.section-16x9{
+//     @media only screen and (min-width: $desktop-xl){ 
+//         display: block;
+//         height: $height;
+//         min-height: $height;
+//     }
+//     &:first-child(){
+//         display: none;
+//     }
+// }
+/*******************/
+// WHITE SPACE FIX  | CONTAINER
+/*******************/
+.container-16x9 {
+    height: 0;
+    overflow: hidden;
+    // padding-top: 56.25%;
+    padding-top: 50%;
+    position: relative;
+    font-family: $font-main, $font-fallback;
+    &__inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        @media only screen and (max-width: $desktop) {
+            position: relative;
+            height: auto;
+            width: 100%;
+            overflow: visible;
+        }
+
+        @media only screen and (max-width: 1385px) {
+            & > h4{
+                display:none;
+            }
+            & > h6 {
+                font-size: 15px;
+                line-height: 20px;
+            }
+            & > h6:nth-child(2) {
+                display: none;
+            }
+        }
+    }
+    @media only screen and (max-width: $breakpoint) {
+        padding: unset;
+        height: auto;
+        width: 100%;
+    }
+    /*******************/
+    // WHITE SPACE FIX  | CONTAINER
+    /*******************/ 
+    @media only screen and (min-width: $desktop-xl){ 
+        // padding-top: inherit;
+        // padding-top: 700px;
+        // display: block;
+        // height: $height;
+        // max-height: $height;
+        // padding-top: auto;
+    }
+}
+
+.container-16x9--half {
+    height: auto;
+    overflow: hidden;
+    padding-top: calc(56.25% / 1.5);
+    position: relative;
+    font-family: $font-main, $font-fallback;
+    &__inner {
+        // @include padding-box;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      
+        @media only screen and (max-width: $breakpoint) {
+            position: relative;
+            height: auto;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        @media only screen and (max-width: 1385px) {
+            & > h4{
+                // display:none;
+            }
+            & > h6 {
+                font-size: 15px;
+                line-height: 20px;
+            }
+        }
+    }
+    
+    @media only screen and (max-width: $breakpoint) {
+        padding-top: 0 !important;
+        height: auto;
+        width: 100%;
+
+    }
+}
+
+.container-main{
+    @include center-block;
+    width: 1080px;
+    max-width: 100%;
+
+}
+
+.container-square {
+    width: 100%;
+    padding-top: 50%;
+    overflow: visible;
+    position: relative;
+    min-height: inherit;
+    font-family: $font-main, $font-fallback;
+
+    &__inner {
+        // @include padding-box;
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        min-height: inherit;
+
+        @media only screen and (max-width: $breakpoint) {
+            position: relative;
+            width: 100%;
+            overflow: visible;
+        }
+
+        @media only screen and (max-width: 1385px) {
+            h6 {
+                font-size: 15px;
+                line-height: 20px;
+            }
+
+            h6:nth-child(2) {
+                display: none;
+            }
+        }
+    }
+
+    @media only screen and (max-width: $breakpoint) {
+        padding: unset;
+        height: auto;
+        width: 100%;
+
+        // min-height: 150px;
+    }
+}
+
+.container-centered-text {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    flex-basis: 100%;
+    min-height: inherit;
+    font-family: $font-main, $font-fallback;
+    overflow: visible;
+
+    &__inner {
+        @include padding-box(45px);
+        @include mobile-padding;
+        position: absolute;
+        min-height: inherit;
+        display: table;
+        width: 100%;
+        max-width: 100%;
+        height: inherit;
+        text-align: center;
+        .text-block-main{
+            text-align: left !important;
+        }
+        line-height: normal;
+
+        @media only screen and (max-width: $breakpoint) {
+            @include padding-box(50px 15px);
+            z-index: 999;
+            position: relative;
+            display: block;
+            min-height: inherit;
+            overflow: visible !important;
+        }
+
+        &__content {
+            width: 100%;
+            min-height: inherit;
+            display: table-cell;
+            vertical-align: middle;
+            font-family: $font-main, $font-fallback;
+            color: #333;
+
+            @media only screen and (max-width: $breakpoint) {
+                display: block;
+                min-height: inherit;
+            }
+
+            & > h5 {
+                // @include center-block;
+                @include text-width;
+                @media only screen and (max-width: $desktop-xl){ 
+                    font-size: 22px !important;
+                    line-height: 30px !important;
+                }
+            }
+        }
+    }
+}
+
+.container-left-text {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: inherit;
+
+    &__inner {
+        @include padding-box(45px);
+        @include mobile-padding;
+
+        width: 100%;
+        height: 100%;
+        line-height: normal;
+
+        &__content {
+            width: 100%;
+            height: auto;
+            font-family: $font-main, $font-fallback;
+            overflow: scroll;
+        }
+    }
+}
+
+.container-full-width-half-col {
+    position: relative;
+    height: inherit;
+    min-height: inherit;
+    overflow: hidden;
+    width: 100%;
+
+    // height: 500px;
+    // min-height: 500px;
+    @media only screen and (max-width: $mobile) {
+        height: inherit;
+
+        // min-height: 300px;
+    }
+
+    .photo-section {
+        @include photo-cover;
+
+        height: auto;
+        min-height: inherit;
+        overflow: hidden;
+        background-image: url("http://localhost:8888/bd-long-brothers-landscaping/wp-content/uploads/2019/12/lb-half-width-1.jpg");
+    }
+
+    .quote-section {
+        // background-color: $color-2;
+        height: auto;
+        overflow: hidden;
+        height: inherit;
+        min-height: inherit;
+    }
+}
+
+.container-flex-height {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    min-height: inherit;
+    @media only screen and (max-width: $mobile){
+        min-height: unset;
+     }
+}

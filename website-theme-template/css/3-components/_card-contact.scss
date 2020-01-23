@@ -1,0 +1,9 @@
+.card-contact{
+    margin: 0 auto;
+    height: 350px !important;
+    width: 350px !important;
+    @media only screen and (max-width: $mobile){ 
+        height: 350px !important;
+        width: 300px !important;
+    }
+}

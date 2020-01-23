@@ -1,0 +1,14 @@
+.centered-text-con-list{
+    ul{
+        &:before{
+            border: solid 1px $color-1;
+        }
+        @include center-block(15px);
+        @include text-width;
+        li{
+            text-align: left !important;
+            font-size: 20px;
+            line-height: 40px;
+        }
+    }
+}
